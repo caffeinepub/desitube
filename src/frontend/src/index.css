@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Saffron Orange - Primary */
+    --primary: 0.68 0.21 47;
+    --primary-foreground: 1 0 0;
+
+    /* Deep Green - Secondary */
+    --secondary: 0.52 0.16 145;
+    --secondary-foreground: 1 0 0;
+
+    /* Warm cream background */
+    --background: 0.98 0.01 80;
+    --foreground: 0.16 0.02 260;
+
+    /* Card */
+    --card: 1 0 0;
+    --card-foreground: 0.16 0.02 260;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.16 0.02 260;
+
+    /* Muted */
+    --muted: 0.93 0.01 80;
+    --muted-foreground: 0.5 0.03 260;
+
+    /* Accent - gold */
+    --accent: 0.82 0.15 85;
+    --accent-foreground: 0.16 0.02 260;
+
+    /* Destructive */
+    --destructive: 0.58 0.22 25;
+    --destructive-foreground: 1 0 0;
+
+    /* Border/Input */
+    --border: 0.88 0.03 80;
+    --input: 0.88 0.03 80;
+    --ring: 0.68 0.21 47;
+
+    --radius: 0.75rem;
+
+    /* Charts */
+    --chart-1: 0.68 0.21 47;
+    --chart-2: 0.52 0.16 145;
+    --chart-3: 0.82 0.15 85;
+    --chart-4: 0.62 0.18 30;
+    --chart-5: 0.58 0.16 180;
+
+    /* Sidebar */
+    --sidebar: 0.98 0.01 80;
+    --sidebar-foreground: 0.16 0.02 260;
+    --sidebar-primary: 0.68 0.21 47;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.93 0.01 80;
+    --sidebar-accent-foreground: 0.16 0.02 260;
+    --sidebar-border: 0.88 0.03 80;
+    --sidebar-ring: 0.68 0.21 47;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+}
+
+/* Category badge colors */
+.badge-bollywood {
+  background: oklch(0.68 0.21 340 / 0.15);
+  color: oklch(0.5 0.18 340);
+  border-color: oklch(0.68 0.21 340 / 0.3);
+}
+.badge-cricket {
+  background: oklch(0.52 0.16 145 / 0.15);
+  color: oklch(0.38 0.14 145);
+  border-color: oklch(0.52 0.16 145 / 0.3);
+}
+.badge-music {
+  background: oklch(0.62 0.18 280 / 0.15);
+  color: oklch(0.48 0.16 280);
+  border-color: oklch(0.62 0.18 280 / 0.3);
+}
+.badge-comedy {
+  background: oklch(0.82 0.15 85 / 0.15);
+  color: oklch(0.55 0.14 85);
+  border-color: oklch(0.82 0.15 85 / 0.3);
+}
+.badge-food {
+  background: oklch(0.68 0.21 47 / 0.15);
+  color: oklch(0.52 0.18 47);
+  border-color: oklch(0.68 0.21 47 / 0.3);
+}
+.badge-devotional {
+  background: oklch(0.72 0.18 60 / 0.15);
+  color: oklch(0.52 0.16 60);
+  border-color: oklch(0.72 0.18 60 / 0.3);
+}
+.badge-news {
+  background: oklch(0.62 0.18 225 / 0.15);
+  color: oklch(0.44 0.15 225);
+  border-color: oklch(0.62 0.18 225 / 0.3);
+}
+.badge-education {
+  background: oklch(0.55 0.16 180 / 0.15);
+  color: oklch(0.42 0.13 180);
+  border-color: oklch(0.55 0.16 180 / 0.3);
+}
+.badge-entertainment {
+  background: oklch(0.72 0.2 310 / 0.15);
+  color: oklch(0.5 0.18 310);
+  border-color: oklch(0.72 0.2 310 / 0.3);
+}
+
+/* Rangoli decorative border */
+.rangoli-border {
+  border-image: repeating-linear-gradient(
+      90deg,
+      oklch(0.68 0.21 47),
+      oklch(0.82 0.15 85) 20%,
+      oklch(0.52 0.16 145) 40%,
+      oklch(0.82 0.15 85) 60%,
+      oklch(0.68 0.21 47) 80%
+    )
+    1;
+}
+
+/* Video thumbnail hover */
+.video-card-thumb {
+  transition: transform 0.3s ease;
+}
+.video-card-thumb:hover {
+  transform: scale(1.03);
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(
+    to right,
+    oklch(0.16 0.02 260 / 0.85) 0%,
+    oklch(0.16 0.02 260 / 0.5) 60%,
+    transparent 100%
+  );
+}
+
+/* Festive top bar */
+.festive-bar {
+  background: linear-gradient(
+    90deg,
+    oklch(0.68 0.21 47),
+    oklch(0.72 0.18 60),
+    oklch(0.52 0.16 145)
+  );
+}
+
+/* Nav shadow */
+.nav-shadow {
+  box-shadow: 0 2px 20px oklch(0.16 0.02 260 / 0.08);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.93 0.01 80);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.68 0.21 47 / 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.68 0.21 47 / 0.7);
+}
